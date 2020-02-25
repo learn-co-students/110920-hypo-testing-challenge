@@ -127,3 +127,6 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# We actually want the SQLite database to get checked into git
+!*.sqlite
