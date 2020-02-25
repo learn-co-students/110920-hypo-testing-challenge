@@ -17,7 +17,7 @@ Create a new Jupyter notebook to complete the challenge and show your work. Make
 
 The business question you are trying to answer is:
 
-> Is the mean `quantity` of a product ordered *greater* when the product is discounted, compared to when it is not?
+> Is the mean `Quantity` of a product ordered *greater* when the product is discounted, compared to when it is not?
 
 In the Jupyter Notebook, document:
 
@@ -28,11 +28,7 @@ In the Jupyter Notebook, document:
 
 Contained in this repo is a SQLite database named ***northwind_db.sqlite***.  This database represents a subset of of the Northwind database — a free, open-source dataset created by Microsoft.  It contains the sales data for a fictional company called Northwind Traders.  The full ERD is below.
 
-For your main task, you are only required to utilize the **OrderDetail** table.  Note that the notation used in this ERD differs slightly from the actual SQLite table names.  Recall that you can use the following SQLite command to view a list of all tables in a database:
-
-```
-SELECT name FROM sqlite_master WHERE type='table';
-```
+For your main task, you are only required to utilize the **OrderDetail** table.
 
 Using SQL and/or Pandas, import the data contained in the OrderDetail table to begin data cleaning and analysis.
 
@@ -40,11 +36,13 @@ Using SQL and/or Pandas, import the data contained in the OrderDetail table to b
 
 ### Preprocessing Data
 
-Before executing a statistical test, some preprocessing is needed to set up the framing of *when the product is discounted*.  Specifically, create two array-like variables `discounted` and `not_discounted`, distinguished from each other based on the values in the `discount` column and containing values from the `quantity` column.  The definition of "discounted" is that `discount` is greater than 0.
+Before executing a statistical test, some preprocessing is needed to set up the framing of *when the product is discounted*.  Specifically, create two array-like variables `discounted` and `not_discounted`, distinguished from each other based on the values in the `Discount` column and containing values from the `Quantity` column.  (In other words, two "lists" of quantities, although those "lists" can be Pandas Series objects, NumPy arrays, base Python lists, or any other array-like.)  The definition of "discounted" is that `Discount` is greater than 0.
 
 ### Executing a Hypothesis Test
 
 Run a statistical test on the two samples, `discounted` and `not_discounted`.  Use a significance level of &alpha; = 0.05.
+
+Write a few sentences explaining why you have chosen to run the statistical test you have chosen to run.
 
 You may import the functions stored in the `flatiron_stats.py` file to help perform your hypothesis tests. It contains the stats functions from the Learn.co lessons: `welch_t(a,b)`, `welch_df(a, b)`, and `p_value(a, b, two_sided=False)`.
 
@@ -52,7 +50,7 @@ Note that `scipy.stats.ttest_ind(a, b, equal_var=False)` performs a two-sided We
 
 ### Interpreting Results
 
-What do the results of your hypothesis test indicate?  Frame this answer for a business audience.  Consider utilizing visualizations to support your recommendation to Northwind Trading.
+What do the results of your hypothesis test indicate?  Can you reject the null hypothesis, and what does this mean from a business context?  Consider utilizing visualizations to support your recommendation to Northwind Trading.
 
 ## Deliverables
 
@@ -60,5 +58,5 @@ Your main deliverable is a Jupyter notebook containing the following clearly lab
 
 1. Hypothesis test setup (defining null hypothesis, alternative hypothesis, Type I and Type II errors)
 2. Array-like variables `discounted` and `not_discounted` representing the order quantities for discounted an non-discounted orders, respectively
-3. A hypothesis test that answers the business question: *Is the mean `quantity` of a product ordered greater when the product is discounted, compared to when it is not?*
+3. A hypothesis test that answers the business question: *Is the mean `Quantity` of a product ordered greater when the product is discounted, compared to when it is not?*
 4. A short paragraph detailing your findings
