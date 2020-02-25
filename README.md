@@ -40,7 +40,7 @@ Using SQL and/or Pandas, import the data contained in the OrderDetail table to b
 
 ### Preprocessing Data
 
-Before executing a statistical test, some preprocessing is needed to set up the framing of *when the product is discounted*.  Specifically, create two array-like variables `discounted` and `not_discounted`, based on the values in the `discount` column.  The definition of "discounted" is that `discount` is greater than 0.
+Before executing a statistical test, some preprocessing is needed to set up the framing of *when the product is discounted*.  Specifically, create two array-like variables `discounted` and `not_discounted`, distinguished from each other based on the values in the `discount` column and containing values from the `quantity` column.  The definition of "discounted" is that `discount` is greater than 0.
 
 ### Executing a Hypothesis Test
 
@@ -53,3 +53,12 @@ Note that `scipy.stats.ttest_ind(a, b, equal_var=False)` performs a two-sided We
 ### Interpreting Results
 
 What do the results of your hypothesis test indicate?  Frame this answer for a business audience.  Consider utilizing visualizations to support your recommendation to Northwind Trading.
+
+## Deliverables
+
+Your main deliverable is a Jupyter notebook containing the following clearly labeled:
+
+1. Hypothesis test setup (defining null hypothesis, alternative hypothesis, Type I and Type II errors)
+2. Array-like variables `discounted` and `not_discounted` representing the order quantities for discounted an non-discounted orders, respectively
+3. A hypothesis test that answers the business question: *Is the mean `quantity` of a product ordered greater when the product is discounted, compared to when it is not?*
+4. A short paragraph detailing your findings
