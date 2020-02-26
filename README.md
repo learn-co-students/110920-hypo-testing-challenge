@@ -57,6 +57,27 @@ What do the results of your hypothesis test indicate?  Can you reject the null h
 Your main deliverable is a Jupyter notebook containing the following clearly labeled:
 
 1. Hypothesis test setup (defining null hypothesis, alternative hypothesis, Type I and Type II errors)
-2. Array-like variables `discounted` and `not_discounted` representing the order quantities for discounted an non-discounted orders, respectively
+2. Array-like variables `discounted` and `not_discounted` representing the order quantities for discounted and non-discounted orders, respectively
 3. A hypothesis test that answers the business question: *Is the mean `Quantity` of a product ordered greater when the product is discounted, compared to when it is not?*
 4. A short paragraph detailing your findings
+
+## Bonus
+
+NOTE: Please do not attempt this section until you have fully completed the main sections. `git add` and `git commit` your code from the previous sections before continuing.
+
+Your previous analysis indicates whether customers are buying higher quantities per order for discounted products.  But how does that impact the **profit margin per order**?
+
+For the purpose of this analysis, profit margin per order is calculated as:
+
+(`sale price` * `quantity per unit`) - `wholesale price`
+
+ -  `sale price` is defined as the discounted `OrderDetail` `UnitPrice`, i.e.
+    - `UnitPrice` * (1 - `Discount`)
+ - `quantity per unit` is defined as the `QuantityPerUnit` from `Product`
+ - `wholesale price` is defined as the `Product` `UnitPrice`
+
+The question to answer is:
+
+> Is the mean profit margin per order greater when the product is discounted, compared to when it is not?
+
+Answer this question descriptively first (comparing the two means), then set up and execute a hypothesis test if you have time.
