@@ -42,9 +42,11 @@ Before executing a statistical test, some preprocessing is needed to set up the 
 
 Run a statistical test on the two samples, `discounted` and `not_discounted`.  Use a significance level of &alpha; = 0.05.
 
+***Note:*** treat the entire collections `discounted` and `not_discounted` as "samples" of their respective populations.  You do not need to take further samples from those collections.
+
 Write a few sentences explaining why you have chosen to run the statistical test you have chosen to run.
 
-You may import the functions stored in the `flatiron_stats.py` file to help perform your hypothesis tests. It contains the stats functions from the Learn.co lessons: `welch_t(a,b)`, `welch_df(a, b)`, and `p_value(a, b, two_sided=False)`.
+You may import the functions stored in the `flatiron_stats.py` file to help perform your hypothesis tests. It contains the stats functions from the Learn.co lessons: `welch_t(a,b)`, `welch_df(a, b)`, and `p_value_welch_ttest(a, b, two_sided=False)`.
 
 Note that `scipy.stats.ttest_ind(a, b, equal_var=False)` performs a two-sided Welch's t-test and that p-values derived from two-sided tests are two times the p-values derived from one-sided tests. See the [documentation](https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.ttest_ind.html) for more information.
 
