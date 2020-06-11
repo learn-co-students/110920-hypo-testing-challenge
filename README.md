@@ -54,14 +54,18 @@ Note that `scipy.stats.ttest_ind(a, b, equal_var=False)` performs a two-sided We
 
 What do the results of your hypothesis test indicate?  Can you reject the null hypothesis, and what does this mean from a business context?  Consider utilizing visualizations to support your recommendation to Northwind Trading.
 
-## Deliverables
+# Deliverables Checklist
+
+(Using markdown, mark items as complete in this checklist by changing `[ ]` to `[x]`)
 
 Your main deliverable is a Jupyter notebook containing the following clearly labeled:
 
-1. Hypothesis test setup (defining null hypothesis, alternative hypothesis, Type I and Type II errors)
-2. Array-like variables `discounted` and `not_discounted` representing the order quantities for discounted and non-discounted orders, respectively
-3. A hypothesis test that answers the business question: *Is the mean `Quantity` of a product ordered greater when the product is discounted, compared to when it is not?*
-4. A short paragraph detailing your findings
+ - [ ] Documentation of the null and alternative hypotheses
+ - [ ] Documentation of what Type I and Type II errors mean in this context
+ - [ ] An array-like variable `discounted` that contains the `Quantity` values for records with `Discount` values greater than 0
+ - [ ] An array-list variable `not_discounted` that contains the `Quantity` values for records with `Discount` values equal to 0
+ - [ ] A hypothesis test that answers the business question: *Is the mean `Quantity` of a product ordered greater when the product is discounted, compared to when it is not?*
+ - [ ] A short paragraph detailing your findings
 
 ## Bonus
 
