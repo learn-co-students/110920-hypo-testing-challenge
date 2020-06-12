@@ -63,7 +63,7 @@ Your main deliverable is a Jupyter notebook containing the following clearly lab
  - [ ] Documentation of the null and alternative hypotheses
  - [ ] Documentation of what Type I and Type II errors mean in this context
  - [ ] An array-like variable `discounted` that contains the `Quantity` values for records with `Discount` values greater than 0
- - [ ] An array-list variable `not_discounted` that contains the `Quantity` values for records with `Discount` values equal to 0
+ - [ ] An array-like variable `not_discounted` that contains the `Quantity` values for records with `Discount` values equal to 0
  - [ ] A hypothesis test that answers the business question: *Is the mean `Quantity` of a product ordered greater when the product is discounted, compared to when it is not?*
  - [ ] A short paragraph detailing your findings
 
